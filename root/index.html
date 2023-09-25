@@ -14,7 +14,10 @@
 </head>
 <body>
 
-
+<div class="dark-light-mode_button" id="switch">
+        <i class="fa fa-solid fa-moon" id="luna"></i>
+        <i class="fa fa-solid fa-sun oculto" id="sol"></i>
+</div>
     <!--Layout principal-->
 
     <div class="layout">
@@ -29,17 +32,17 @@
 
                 <div class="user-info__general"> 
                     <div class="user-info__container-imagen">
-                        <img src="assets/img/Imagen-Fabian.jpg" class="user-info__image" alt="Foto de perfil Fabian Mardones"/>
+                        <img src="assets/img/Imagen-Fabian.jpg" class="user-info__image" id="aside___user-info" alt="Foto de perfil Fabian Mardones"/>
                     </div>
 
                     <h2 class="user-info__name">Fabián Mardones</h2>
-                    <h4 class="user-info__job">Desarrollador Front End Jr</h4>
+                    <h4 class="user-info__job">Desarrollador Front End</h4>
                 </div>
 
                 <!--Menú de navegación-->
 
                 <nav class="layout__menu">
-                    <ul class="menu__list">
+                    <ul class="menu__list" id="menu__list">
 
                         <li class="menu__option">
                             <a href="index.html" class="menu__link">
@@ -54,7 +57,7 @@
                                 <span class="menu__overlay">About me</span>
                             </a>
                         </li>
-                        
+
                         <li class="menu__option">
                             <a href="estudios.html" class="menu__link">
                                 <i class="menu__icon fa-solid fa-graduation-cap"></i>
@@ -118,8 +121,8 @@
 
                 <!--pie de página-->
 
-                <footer class="user-info__footer">
-                    &copy; 2023 Fabián Mardones Web    
+                <footer class="user-info__footer" id="current-year">
+                    <p>&copy; <strong></strong> Fabián Mardones Web</p>
                 </footer>
 
             </section>
@@ -128,9 +131,9 @@
 
 
         <!--Contenido principal-->
-        <main class="layout__content">
+        <main class="layout__content" id="layout__content">
 
-            <section class="content__page">
+            <section class="content__page" id="content__page">
                 <h1 class="page__name">Fabián Mardones</h1>
                 <h2 class="page__job">Desarrollador Front End</h2>
             </section>
@@ -142,4 +145,7 @@
 
 
 </body>
+
+<script src="./assets/js/app.js"></script>
+
 </html>

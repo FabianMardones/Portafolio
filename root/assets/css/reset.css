@@ -28,6 +28,7 @@ ul, ol{
 a{
     display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 p a{

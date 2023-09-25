@@ -1,3 +1,367 @@
-body{
-    font-family: "poppins";
+/*Definicion Variables*/
+:root{
+    --color-principal: #FFFFFF;
+    --color-secondary: #e96443;
+    --color-background: #F4F4FC;
+    --color-transparent: transparent;
+    --color-icons: #B5B7BA;
+    --color-subtitle: #888;
+    --color-title: #222222;
+    --color-text: #555;
 }
+
+/*Estilos generales*/
+html{
+    font-size: 10px;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--color-title)
+}
+
+/*Imagen de fondo*/
+body{
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -55px -120px;
+}
+
+
+
+/*Estructura principal*/
+.layout{
+    position: relative;
+    min-width: 1290px;
+    width: 75%;
+    min-height: 80vh;
+    height: 80vh;
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-areas:
+        "aside content";
+    grid-template-columns: 30% 70%;
+
+
+    /*Sombra dentrás del layout*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px -5px rgb(0, 0, 0, .25);
+}
+
+/*Barra lateral azul*/
+.layout__aside{
+    grid-area: aside;
+
+    border-radius: 4rem 0 0 4rem;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.aside___user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    min-height: 100%;
+    min-width: 30rem;
+
+    background-color: var(--color-secondary);
+    color: var(--color-principal);
+}
+
+/*Diseño a la imagen*/
+.user-info__container-imagen{
+    position: relative;
+    display: inline-block;
+    width: 20rem;
+    margin-top: 7rem;
+    z-index: 1;
+}
+
+.user-info__image{
+    width: 100%;
+    background-color: var(--color-principal);
+    border: 3px solid var(--color-principal);
+    border-radius: 20rem;
+}
+
+/*Sombra de puntitos*/
+.user-info__container-imagen::after{
+    content: ".";
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 30rem;
+    background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 0.5;
+}
+
+/*Estilos al nombre y al trabajo*/
+
+.user-info__name{
+    margin-top: 3rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.user-info__job{
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/*Estilos a social media*/
+
+.user-info__links{
+    margin-bottom: 4rem;
+}
+
+.links__social{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social__option{
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    opacity: 0.9;
+    border-radius: 1rem;
+}
+
+.social__option:hover{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, .20);
+    transition: all 300ms ease-in-out;
+}
+
+/*Diseñar boton*/
+.user-info__buttons{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.user-info__btn{
+    padding: 1.5rem;
+    width: 18rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 3.2rem;
+    box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, .20)
+}
+
+.user-info__btn:hover{
+    background-color: var(--color-principal);
+    color: var(--color-secondary);
+    transition: all 200ms ease-in-out;
+}
+
+
+/* diseño de footer,(usa JS)*/
+.user-info__footer{
+    position: absolute;
+    bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+
+
+/*Contenedor peincipal*/
+.layout__content{
+    grid-area: content;
+    min-height: 100%;
+    height: 100%;
+
+    background-color: var(--color-secondary);
+    border-radius: 0 10rem 10rem 0;
+}
+
+.content__page{
+    min-height: 100%;
+    height: 100%;
+    background-color: var(--color-principal);
+    border-radius: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__name{
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+}
+
+.page__job{
+    font-size: 2.1rem;
+    font-weight: lighter;
+    color: var(--color-subtitle);
+}
+
+
+/*Menu navegacion lateral*/
+
+.layout__menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -105px;
+    min-width: 11rem;
+    background-color: var(--color-transparent);
+}
+
+.menu__list{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+    min-height: 32rem;
+    padding: 2rem 0;
+    margin-left: 2rem;
+    background-color: var(--color-principal);
+    box-shadow: 0 0 3rem -0.5rem rgba(0, 0, 0, .15);
+    border-radius: 6rem;
+}
+
+.menu__option{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.menu__option:hover .menu__icon{
+    color: var(--color-secondary);
+    transition: all 300ms ease-in-out;
+}
+
+.menu__icon{
+    color: var(--color-icons);
+    font-size: 2.8rem;
+}
+
+.menu__overlay{
+    position: absolute;
+    right: 0;
+    margin-top: -3rem;
+    display: block;
+    opacity: 0;
+    padding: 0.5rem 1rem;
+    color: var(--color-principal);
+    background-color: var(--color-secondary);
+    white-space: nowrap;
+    border-radius: 1rem;
+    transition:all 400ms ease-in-out
+}
+
+.menu__option:hover .menu__overlay{
+    opacity: 1;
+    right: 100%;
+}
+
+/*DARK MODE*/
+.oculto{
+    visibility: hidden;
+}
+
+/*Modo Oscuro*/
+.dark-light-mode_button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2rem 3rem;
+    top: 18rem;
+    border-radius: 0 3rem 3rem 0;
+    background-color: var(--color-secondary);
+}
+
+.dark-light-mode_button:hover{
+    cursor: pointer;
+}
+
+.fa-moon{
+    position: absolute;
+    font-size: 3rem;
+    left: 2rem;
+    color: var(--color-background);
+}
+
+
+.fa-sun{
+    position: absolute;
+    font-size: 3rem;
+    left: 2rem;
+    color: var(--color-background);
+}
+
+.dark{
+    background-color: var(--color-title);
+    color: var(--color-principal);
+}
+
+.dark h1, h2, h3, h4, h5, h6{
+    color: var(--color-background);
+}
+
+.dark .content__page{
+    border: 5px solid var(--color-text);
+}
+.dark .menu__list{
+    border: 2px solid var(--color-icons);
+}
+
+.dark .aside___user-info{
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443); 
+}
+
+.dark .dark-light-mode_button{
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
