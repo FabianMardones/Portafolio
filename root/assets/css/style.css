@@ -333,6 +333,7 @@ body{
 }
 .dark .menu__list{
     border: 2px solid var(--color-icons);
+    background-color: var(--color-transparent);
 }
 
 .dark .aside___user-info{
@@ -346,7 +347,6 @@ body{
     background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #904e95, #e96443); 
 }
-
 
 
 
