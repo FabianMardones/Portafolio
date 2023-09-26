@@ -11,6 +11,8 @@ const menuList = document.querySelector('#menu__list')
 const layoutContent = document.querySelector('#layout__content')
 const userInfo = document.querySelector('#aside___user-info')
 const layoutMenu= document.querySelector('.layout__menu')
+const title = document.querySelector('.title')
+
 
 
 
@@ -43,6 +45,7 @@ function cambiarIcono(){
         userInfo.classList.toggle('dark')
         switchMode.classList.toggle('dark')
         menuList.classList.toggle('dark')
+        title.classList.toggle('dark')
     }
 
 }

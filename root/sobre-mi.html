@@ -14,10 +14,12 @@
 </head>
 <body>
 
-<div class="dark-light-mode_button" id="switch">
-        <i class="fa fa-solid fa-moon" id="luna"></i>
-        <i class="fa fa-solid fa-sun oculto" id="sol"></i>
-</div>
+    <div class="dark-light-mode_button" id="switch">
+        <div class="button__shadow">
+            <i class="fa fa-solid fa-moon" id="luna"></i>
+            <i class="fa fa-solid fa-sun oculto" id="sol"></i>
+        </div>
+    </div>
     <!--Layout principal-->
 
     <div class="layout">
@@ -135,10 +137,10 @@
 
             <section class="content__page content__about" id="content__page">
                 <header class="about__header">
-                    <h2 class="about__title">About <strong class="title__color">Me</strong></h2>
+                    <h2 class="about__title title">About <strong class="title__color">Me</strong></h2>
                 </header>
 
-                <section class="about__personal-info about">
+                <section class="about__personal-info">
                     <article class="personal-info__bio">
                         <p class="personal-info__description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quod fugit reprehenderit quo, cumque excepturi mollitia velit maxime hic fuga natus aspernatur accusantium, autem temporibus, veniam eius! Quis, assumenda blanditiis.
@@ -177,9 +179,9 @@
                     </div>
                 </section>
 
-                <section class="about__services about">
+                <section class="about__services">
                     <div class="services__header">
-                        <h3 class="services__title">
+                        <h3 class="services__title title">
                             Lo que <strong class="title__color">Hago</strong>
                         </h3>
                     </div>
@@ -192,14 +194,29 @@
                             </div>
 
                             <div class="service__content">
-                                <h4 class="service__title">Programación</h4>
+                                <h4 class="service__title title">Programación</h4>
                                 <p class="service__description">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nemo maxime incidunt reiciendis! Hic doloremque, sapiente animi quod iusto odio facere officiis, molestias, voluptatibus repudiandae optio est placeat explicabo sed?
                                 </p>
                             </div>
 
+                            <div class="service__icono">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
                             <div class="service__content">
-                                <h4 class="service__title">Administración</h4>
+                                <h4 class="service__title title">Administración</h4>
+                                <p class="service__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nemo maxime incidunt reiciendis! Hic doloremque, sapiente animi quod iusto odio facere officiis, molestias, voluptatibus repudiandae optio est placeat explicabo sed?
+                                </p>
+                            </div>
+
+                            <div class="service__icono">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+
+                            <div class="service__content">
+                                <h4 class="service__title title">Padre y esposo</h4>
                                 <p class="service__description">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nemo maxime incidunt reiciendis! Hic doloremque, sapiente animi quod iusto odio facere officiis, molestias, voluptatibus repudiandae optio est placeat explicabo sed?
                                 </p>
@@ -208,6 +225,96 @@
                         </article>
                     </div>
                 </section>
+
+                <section class="about__testimonials">
+                    <header class="testimonials__header">
+                        <h3 class="testimonials__title title">Reseñas</h3>
+                    </header>
+
+                    <div class="testimonials__container">
+
+                        <article class="testimonials__testimonials">
+
+                            <div class="review__img-container">
+                                <img src="assets/img/testimonio1.jpg" class="testimonials__image" alt="Rostro de cliente">
+                            </div>
+
+                            <div class="testimonials__description">
+                                <p class="testimonials__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum animi distinctio molestias aliquid, reprehenderit in doloribus deserunt ex dolorem fuga voluptas inventore, iure nulla facilis maxime? Molestiae, quibusdam non?
+                                </p>
+                            </div>
+
+                            <div class="testimonials__author">
+                                <div class="testimonials__author-info">
+                                    <h4 class="testimonials__name title">
+                                        Mario Mardones
+                                    </h4>
+                                    <h5 class="testimonials__compay title">Milansitos Barber</h5>
+                                </div>
+
+                                <div class="testimonials__author-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonials__testimonials">
+
+                            <div class="review__img-container">
+                                <img src="assets/img/testimonio1.jpg" class="testimonials__image" alt="Rostro de cliente">
+                            </div>
+
+                            <div class="testimonials__description">
+                                <p class="testimonials__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum animi distinctio molestias aliquid, reprehenderit in doloribus deserunt ex dolorem fuga voluptas inventore, iure nulla facilis maxime? Molestiae, quibusdam non?
+                                </p>
+                            </div>
+
+                            <div class="testimonials__author">
+                                <div class="testimonials__author-info">
+                                    <h4 class="testimonials__name title">
+                                        Mario Mardones
+                                    </h4>
+                                    <h5 class="testimonials__compay title">Milansitos Barber</h5>
+                                </div>
+
+                                <div class="testimonials__author-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+
+                                </div>
+                            </div>
+                        </article><article class="testimonials__testimonials">
+
+                            <div class="review__img-container">
+                                <img src="assets/img/testimonio2.jpg" class="testimonials__image" alt="Rostro de cliente">
+                            </div>
+
+                            <div class="testimonials__description">
+                                <p class="testimonials__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum animi distinctio molestias aliquid, reprehenderit in doloribus deserunt ex dolorem fuga voluptas inventore, iure nulla facilis maxime? Molestiae, quibusdam non?
+                                </p>
+                            </div>
+
+                            <div class="testimonials__author">
+                                <div class="testimonials__author-info">
+                                    <h4 class="testimonials__name title">
+                                        Vanesa Fredes
+                                    </h4>
+                                    <h5 class="testimonials__compay title">for God</h5>
+                                </div>
+
+                                <div class="testimonials__author-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
             </section>
 
         </main>

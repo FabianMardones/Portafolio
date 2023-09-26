@@ -148,12 +148,12 @@ body{
     line-height: 3.2rem;
     opacity: 0.9;
     border-radius: 1rem;
+    transition: all 300ms ease-in-out;
 }
 
 .social__option:hover{
     opacity: 1;
     background-color: rgba(255, 255, 255, .20);
-    transition: all 300ms ease-in-out;
 }
 
 /*Diseñar boton*/
@@ -166,13 +166,13 @@ body{
     width: 18rem;
     border: 2px solid var(--color-principal);
     border-radius: 3.2rem;
-    box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, .20)
+    box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, .20);
+    transition: all 200ms ease-in-out;
 }
 
 .user-info__btn:hover{
     background-color: var(--color-principal);
     color: var(--color-secondary);
-    transition: all 200ms ease-in-out;
 }
 
 
@@ -197,7 +197,6 @@ body{
 
 .content__page{
     min-height: 100%;
-    height: 100%;
     background-color: var(--color-principal);
     border-radius: 3.2rem;
 
@@ -283,13 +282,42 @@ body{
     right: 100%;
 }
 
+/*About me*/
+
+.content__about{
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    padding: 6rem;
+    padding-right: 3rem;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Modo Oscuro--------------------------------------------------------------*/
 /*DARK MODE*/
 .oculto{
     visibility: hidden;
 }
 
-.dark-light-mode_button{
+.dark-light-mode_button {
     position: absolute;
     display: flex;
     align-items: center;
@@ -297,43 +325,42 @@ body{
     top: 18rem;
     border-radius: 0 3rem 3rem 0;
     background-color: var(--color-secondary);
+    transition: padding 300ms ease-in-out;
 }
 
-.dark-light-mode_button:hover{
+.dark-light-mode_button:hover {
     cursor: pointer;
+    padding: 3rem 6rem;
 }
 
-.fa-moon{
+.button__shadow{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.fa-moon,
+.fa-sun {
     position: absolute;
     font-size: 3rem;
-    left: 3rem;
     color: var(--color-background);
+    transition: color 300ms ease-in-out; /* Aplicar transición a la propiedad color */
 }
 
-.fa-moon:hover{
+.fa-moon:hover {
     color: rgba(15, 15, 13, 0.818);
-    transition: all 300ms ease-in-out;
 }
 
-
-.fa-sun{
-    position: absolute;
-    font-size: 3rem;
-    left: 3rem;
-    color: var(--color-background);
-}
-
-.fa-sun:hover{
+.fa-sun:hover {
     color: gold;
 }
 
-.dark{
+.dark,
+.dark h1,
+.dark .title{
     background-color: var(--color-title);
     color: var(--color-principal);
-}
-
-.dark h1, h2, h3, h4, h5, h6{
-    color: var(--color-background);
 }
 
 .dark .content__page{
@@ -361,23 +388,8 @@ body{
 
 /*Content about*/
 
-.content__about h1, h2, h3, h4, h5, h6{
-    color: var(--color-title);
-}
-
-.content__page{    
-    display: flex;
-}
 
 
-.about img{
-    position: absolute;
-    top: 20rem;
-    right: 30rem;
-    height: 20rem;
-    width: 20rem;
-    background-color: #222222;
-}
 
 
 
