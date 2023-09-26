@@ -158,7 +158,6 @@ body{
 
 /*Diseñar boton*/
 .user-info__buttons{
-    margin-top: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -186,7 +185,7 @@ body{
 
 
 
-/*Contenedor peincipal*/
+/*Contenedor principal*/
 .layout__content{
     grid-area: content;
     min-height: 100%;
@@ -209,7 +208,7 @@ body{
 }
 
 .page__name{
-    margin-top: -4rem;
+    margin-top: -1rem;
     margin-bottom: 1rem;
     font-size: 6rem;
 }
@@ -284,12 +283,12 @@ body{
     right: 100%;
 }
 
+/*Modo Oscuro--------------------------------------------------------------*/
 /*DARK MODE*/
 .oculto{
     visibility: hidden;
 }
 
-/*Modo Oscuro*/
 .dark-light-mode_button{
     position: absolute;
     display: flex;
@@ -311,12 +310,21 @@ body{
     color: var(--color-background);
 }
 
+.fa-moon:hover{
+    color: rgba(15, 15, 13, 0.818);
+    transition: all 300ms ease-in-out;
+}
+
 
 .fa-sun{
     position: absolute;
     font-size: 3rem;
     left: 3rem;
     color: var(--color-background);
+}
+
+.fa-sun:hover{
+    color: gold;
 }
 
 .dark{
@@ -346,6 +354,29 @@ body{
     background: #e96443;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #904e95, #e96443); 
+}
+
+/*Fin modo escuro---------------------------------------------------------------*/
+
+
+/*Content about*/
+
+.content__about h1, h2, h3, h4, h5, h6{
+    color: var(--color-title);
+}
+
+.content__page{    
+    display: flex;
+}
+
+
+.about img{
+    position: absolute;
+    top: 20rem;
+    right: 30rem;
+    height: 20rem;
+    width: 20rem;
+    background-color: #222222;
 }
 
 
