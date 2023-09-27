@@ -291,6 +291,7 @@ body{
     padding: 6rem;
     padding-right: 3rem;
     overflow: auto;
+    color: black;
 }
 
 
@@ -356,13 +357,23 @@ body{
 .fa-sun:hover {
     color: gold;
 }
-
-.dark,
 .dark h1,
-.dark .title{
-    background-color: var(--color-title);
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5{
     color: var(--color-principal);
 }
+
+
+.dark {
+    background-color: var(--color-title);
+}
+
+.dark .content__about{
+    color: white;
+}
+
 
 .dark .content__page{
     border: 5px solid var(--color-text);
