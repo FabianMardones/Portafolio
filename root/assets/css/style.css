@@ -321,7 +321,7 @@ body{
     position: absolute;
     display: flex;
     align-items: center;
-    padding: 3rem 4rem;
+    padding: 3rem 2.5rem;
     top: 18rem;
     border-radius: 0 3rem 3rem 0;
     background-color: var(--color-secondary);
@@ -330,7 +330,7 @@ body{
 
 .dark-light-mode_button:hover {
     cursor: pointer;
-    padding: 3rem 6rem;
+    padding: 3rem 4rem;
 }
 
 .button__shadow{
@@ -343,6 +343,7 @@ body{
 .fa-moon,
 .fa-sun {
     position: absolute;
+    left: -1.5rem;
     font-size: 3rem;
     color: var(--color-background);
     transition: color 300ms ease-in-out; /* Aplicar transición a la propiedad color */
