@@ -29,6 +29,12 @@
     box-shadow: inset 0 0 0 10px var(--color-scrollbar);
 }
 
+.content__page:hover::-webkit-scrollbar-thumb:hover,
+.image__container:hover::-webkit-scrollbar-thumb:hover{
+    border: 8px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-secondary);
+}
+
 .content__page::-webkit-scrollbar-track{
     margin: 40px 0; 
 }
