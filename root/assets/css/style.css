@@ -424,7 +424,8 @@ body{
 }
 
 .card-img-meta,
-.card-img-coursera {
+.card-img-coursera,
+.card-img-google {
     position: absolute;
     width: 80%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
     height: 27%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
@@ -432,7 +433,8 @@ body{
 
 }
 
-.card-img-meta {
+
+.card-img-meta{
     z-index: 1; /* Establecemos un valor de z-index mayor para que esté sobre la imagen de fondo */
     top: 16rem;
 }
@@ -442,7 +444,21 @@ body{
     top: 10rem;
 }
 
+.card-img-google{
+    height: 15%;
+    z-index: 1;
+    top: 19rem;
+}
+
+.card-google{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, white, rgb(255, 252, 252), var(--color-text)); 
+}
+
+
 .card-body{
+    position: relative;
     width: 100%;
     height: 100%;
     top: 0;
@@ -456,7 +472,9 @@ body{
     transition: all 300ms ease-in-out;
     padding: 1rem;
     color: var(--color-icons);
+    overflow-y: auto;
 }
+
 
 .dark .card-body{
     color: var(--color-principal);
@@ -465,6 +483,7 @@ body{
 .card-body:hover{
     opacity: 1;
 }
+
 
 .card-title{
     font-size: 2rem;
@@ -486,6 +505,7 @@ body{
     color: var(--color-secondary);
     margin-left: .5rem;
     font-weight: bold;
+    overflow: auto;
 }
 
 .btn-container-card{
@@ -502,11 +522,75 @@ body{
     transition: all 300ms ease-in-out;
 }
 
+.btnd{
+    position: relative;
+    top: 0;
+    left: 2rem;
+    padding: 1rem;
+    text-align: center;
+    width: 17rem;
+}
+
 .card-btn:hover{
     background-color: var(--color-principal);
     color: var(--color-secondary);
 }
 
+.card-leones{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d61b1b77, var(--color-background));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-background),var(--color-secondary), rgb(117, 33, 33)); 
+}
+
+.card-img-leones{
+    position: absolute;
+    top: 10rem;
+    width: 22rem;
+    left: 2rem;
+    height: 20rem;
+
+}
+
+.card-ip{
+    padding: 0.5rem;
+}
+
+.card-2 p:hover{
+    margin: 0;
+}
+
+.card-DH{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-background), rgb(255, 34, 0), var(--color-title)); 
+}
+
+.card-img-DH{
+    width: 20rem;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+}
+.card-img-ctd{
+    width: 20rem;
+    position: absolute;
+    top: 19rem;
+    left: 2rem;
+}
+
+
+.card-poliglota{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-principal), rgb(166, 255, 166), #989898); 
+}
+
+.card-img-poliglota{
+    width: 23rem;
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+}
 
 
 
