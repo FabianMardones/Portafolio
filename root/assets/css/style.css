@@ -295,6 +295,107 @@ body{
     color: var(--color-subtitle)
 }
 
+.about__header{
+    margin-bottom: 4.5rem;
+}
+
+.about__title{
+    position: relative;
+    font-size: 3.2rem;
+    z-index: 1;
+}
+
+.about__title::after{
+    content: "";
+    position: absolute;
+    top: 16.5px;
+    left: 115px;
+    z-index: -1;
+    width: 7%;
+    height: 70%;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-secondary), var(--color-secondary) 1px, transparent 0px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 0.5;
+}
+
+.title__color{
+    color: var(--color-secondary);
+}
+
+
+/*Información personal*/
+
+
+.about__personal-info{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.personal-info__bio,
+.pesonal-info__list{
+    width: 100%;
+    height: 20rem;
+}
+
+
+.personal-info__data{
+    width: 80%;
+    height: 100%;
+}
+
+.personal-info__title{
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.personal-info__option{
+    margin-bottom: 1rem;
+}
+
+.about__services{
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.services__header{
+    margin-bottom: 2.5rem;
+}
+
+.services__title{
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.services__title::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 105px;
+    z-index: -1;
+    width: 4.5%;
+    height: 80%;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-secondary), var(--color-secondary) 1px, transparent 0px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 0.5;
+}
+
+
+.services__container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.services__service{
+    flex-basis: 50%;
+}
+.service__real-icon{
+    font-size: 3rem;
+    color: var(--color-secondary);
+}
 
 
 
@@ -305,6 +406,211 @@ body{
 
 
 
+
+
+
+
+/*Fin modo escuro---------------------------------------------------------------*/
+
+.image__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    padding-left: 60%;
+    overflow: auto;
+ /* Agregamos position: relative; */
+}
+
+.card {
+    width: 25rem;  
+    height: 43rem;
+    border-radius: 2rem;
+    margin: 0 2rem;
+    overflow: hidden;
+    position: relative; /* Agregamos position: relative; */
+    box-shadow: 2px 3px 10px -5px;
+}
+
+
+.card-img{
+    position: absolute;
+    width: 100%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
+    height: 100%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.card-img-meta,
+.card-img-coursera,
+.card-img-google {
+    position: absolute;
+    width: 80%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
+    height: 27%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
+    left: 2.5rem;
+
+}
+
+
+.card-img-meta{
+    z-index: 1; /* Establecemos un valor de z-index mayor para que esté sobre la imagen de fondo */
+    top: 16rem;
+}
+
+.card-img-coursera {
+    z-index: 1; /* Establecemos un valor de z-index aún mayor para que esté sobre la imagen de fondo y la imagen Meta */
+    top: 10rem;
+}
+
+.card-img-google{
+    height: 15%;
+    z-index: 1;
+    top: 19rem;
+}
+
+.card-google{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, white, rgb(255, 252, 252), var(--color-text)); 
+}
+
+
+.card-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 3;
+    position: absolute;
+    background: #00000096;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    padding: 1rem;
+    color: var(--color-icons);
+    overflow-y: auto;
+}
+
+.card-body:hover{
+    opacity: 1;
+}
+
+
+.card-title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-principal);
+}
+
+.card-sub-title{
+    height: 100%;
+    width: 100%;
+    color: var(--color-principal);
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    transition: all 400ms ease-in-out;
+}
+
+.card-sub-title:hover{
+    padding: .2rem;
+    border-radius: .5rem;
+    background-color: var(--color-principal);
+    color: var(--color-secondary);
+    margin-left: .5rem;
+    font-weight: bold;
+    overflow: auto;
+}
+
+.btn-container-card{
+    position: absolute;
+    top: 35.5rem;
+    left: 5rem;
+}
+
+.card-btn{
+    padding: 1.5rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 3rem;
+    box-shadow: 1px 1px 3px -2px;
+    transition: all 300ms ease-in-out;
+    color: var(--color-principal);
+}
+
+.btnd{
+    position: relative;
+    top: 0;
+    left: 2rem;
+    padding: 1rem;
+    text-align: center;
+    width: 17rem;
+}
+
+.card-btn:hover{
+    background-color: var(--color-principal);
+    color: var(--color-secondary);
+}
+
+.card-leones{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d61b1b77, var(--color-background));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-background),var(--color-secondary), rgb(117, 33, 33)); 
+}
+
+.card-img-leones{
+    position: absolute;
+    top: 10rem;
+    width: 22rem;
+    left: 1.5rem;
+    height: 20rem;
+
+}
+
+.card-ip{
+    padding: 0.5rem;
+}
+
+.card-2 p:hover{
+    margin: 0;
+}
+
+.card-DH{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-background), rgb(255, 34, 0), var(--color-title)); 
+}
+
+.card-img-DH{
+    width: 20rem;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+}
+.card-img-ctd{
+    width: 20rem;
+    position: absolute;
+    top: 19rem;
+    left: 2rem;
+}
+
+
+.card-poliglota{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, var(--color-principal), rgb(166, 255, 166), #989898); 
+}
+
+.card-img-poliglota{
+    width: 23rem;
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+}
 
 
 
@@ -389,213 +695,9 @@ body{
     background: linear-gradient(to right, #904e95, #e96443); 
 }
 
-/*Fin modo escuro---------------------------------------------------------------*/
-
-.image__container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    position: relative;
-    padding-left: 60%;
-    overflow: auto;
- /* Agregamos position: relative; */
-}
-
-.card {
-    width: 25rem;  
-    height: 43rem;
-    border-radius: 2rem;
-    margin: 0 2rem;
-    overflow: hidden;
-    position: relative; /* Agregamos position: relative; */
-    box-shadow: 2px 3px 10px ;
-}
-
-
-.card-img{
-    position: absolute;
-    width: 100%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
-    height: 100%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-.card-img-meta,
-.card-img-coursera,
-.card-img-google {
-    position: absolute;
-    width: 80%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
-    height: 27%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
-    left: 2.5rem;
-
-}
-
-
-.card-img-meta{
-    z-index: 1; /* Establecemos un valor de z-index mayor para que esté sobre la imagen de fondo */
-    top: 16rem;
-}
-
-.card-img-coursera {
-    z-index: 1; /* Establecemos un valor de z-index aún mayor para que esté sobre la imagen de fondo y la imagen Meta */
-    top: 10rem;
-}
-
-.card-img-google{
-    height: 15%;
-    z-index: 1;
-    top: 19rem;
-}
-
-.card-google{
-    background: var(--color-background);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, white, rgb(255, 252, 252), var(--color-text)); 
-}
-
-
-.card-body{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 3;
-    position: absolute;
-    background: #00000096;
-    z-index: 2;
-    backdrop-filter: blur(5px);
-    border-radius: 2rem;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-    padding: 1rem;
-    color: var(--color-icons);
-    overflow-y: auto;
-}
-
-
 .dark .card-body{
     color: var(--color-principal);
 }
-
-.card-body:hover{
-    opacity: 1;
-}
-
-
-.card-title{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-
-.card-sub-title{
-    text-transform: capitalize;
-    font-size: 1.4rem;
-    margin-bottom: 0.4rem;
-    transition: all 400ms ease-in-out;
-}
-
-.card-sub-title:hover{
-    padding: .2rem;
-    border-radius: .5rem;
-    background-color: var(--color-principal);
-    color: var(--color-secondary);
-    margin-left: .5rem;
-    font-weight: bold;
-    overflow: auto;
-}
-
-.btn-container-card{
-    position: absolute;
-    top: 35.5rem;
-    left: 5rem;
-}
-
-.card-btn{
-    padding: 1.5rem;
-    border: 2px solid var(--color-principal);
-    border-radius: 3rem;
-    box-shadow: 1px 1px 3px -2px;
-    transition: all 300ms ease-in-out;
-}
-
-.btnd{
-    position: relative;
-    top: 0;
-    left: 2rem;
-    padding: 1rem;
-    text-align: center;
-    width: 17rem;
-}
-
-.card-btn:hover{
-    background-color: var(--color-principal);
-    color: var(--color-secondary);
-}
-
-.card-leones{
-    background: var(--color-background);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #d61b1b77, var(--color-background));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, var(--color-background),var(--color-secondary), rgb(117, 33, 33)); 
-}
-
-.card-img-leones{
-    position: absolute;
-    top: 10rem;
-    width: 22rem;
-    left: 2rem;
-    height: 20rem;
-
-}
-
-.card-ip{
-    padding: 0.5rem;
-}
-
-.card-2 p:hover{
-    margin: 0;
-}
-
-.card-DH{
-    background: var(--color-background);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, var(--color-background), rgb(255, 34, 0), var(--color-title)); 
-}
-
-.card-img-DH{
-    width: 20rem;
-    position: absolute;
-    top: 8rem;
-    left: 2rem;
-}
-.card-img-ctd{
-    width: 20rem;
-    position: absolute;
-    top: 19rem;
-    left: 2rem;
-}
-
-
-.card-poliglota{
-    background: var(--color-background);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, var(--color-principal), rgb(166, 255, 166), #989898); 
-}
-
-.card-img-poliglota{
-    width: 23rem;
-    position: absolute;
-    top: 15rem;
-    left: 1rem;
-}
-
-
-
-
-
 
 
 
