@@ -452,8 +452,44 @@ body{
     border-radius: 9rem;
     margin: 0 auto;
     margin-top: -5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.25);
 }
 
+.testimonials__description{
+    margin-bottom: 1rem;
+}
+
+.testimonials__text{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+.testimonials__author{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
+.testimonials__name{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.testimonials__company{
+    color: var(--color-company);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.testimonials__icon{
+    font-size: 4rem;
+    opacity: 0.5rem;
+    color: var(--color-secondary);
+}
 
 
 
