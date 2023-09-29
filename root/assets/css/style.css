@@ -8,6 +8,8 @@
     --color-subtitle: #888;
     --color-title: #222222;
     --color-text: #555;
+    --color-border-testimonials: #e5e6e7;
+    --color-company: #a5a6a7;
 }
 
 /*Estilos generales*/
@@ -329,18 +331,29 @@ body{
 .about__personal-info{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
+    
 }
 
-.personal-info__bio,
+.personal-info__photo{
+    margin-top: -9rem;
+    width: 50%;
+}
+
+.personal-info__bio{
+    width: 50%;
+}
 .pesonal-info__list{
+    margin-top: 2rem;
     width: 100%;
     height: 20rem;
 }
 
 
 .personal-info__data{
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
@@ -353,23 +366,26 @@ body{
     margin-bottom: 1rem;
 }
 
-.about__services{
-    display: block;
+.about__services,
+.about__testimonials{
     width: 100%;
     margin-bottom: 3rem;
 }
 
-.services__header{
+.services__header,
+.testimonials__header{
     margin-bottom: 2.5rem;
 }
 
-.services__title{
+.services__title,
+.testimonials__title{
     font-size: 2rem;
     position: relative;
     z-index: 1;
 }
 
-.services__title::after{
+.services__title::after,
+.testimonials__title::after{
     content: "";
     position: absolute;
     top: 10px;
@@ -382,6 +398,10 @@ body{
     opacity: 0.5;
 }
 
+.reseñas::after{
+    left: 6.5rem;
+}
+
 
 .services__container{
     display: flex;
@@ -391,12 +411,48 @@ body{
 
 .services__service{
     flex-basis: 50%;
+    margin-bottom: 3rem;
 }
 .service__real-icon{
     font-size: 3rem;
     color: var(--color-secondary);
+    margin-bottom: 2rem;
 }
 
+.service__description{
+    width: 95%;
+}
+
+/*Reseñar*/
+
+.testimonials__container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.testimonials__testimonials{
+    flex-basis: calc(50% - 2.5rem);
+
+    border: 2px solid var(--color-border-testimonials);
+    border-radius: 2rem;
+    padding: 0 2.5rem 2.5rem 1.5rem;
+    margin-right: 2.5rem;
+}
+
+.testimonials__image-container{
+    width: 100%;
+}
+
+.testimonials__image{
+    max-width: 9rem;
+    max-height: 9rem;
+    border-radius: 9rem;
+    margin: 0 auto;
+    margin-top: -5rem;
+}
 
 
 
@@ -419,7 +475,7 @@ body{
     height: 100%;
     overflow-y: auto;
     position: relative;
-    padding-left: 60%;
+    padding-left: 63%;
     overflow: auto;
  /* Agregamos position: relative; */
 }
@@ -442,6 +498,12 @@ body{
     top: 0;
     left: 0;
     object-fit: cover;
+}
+
+.card-meta{
+    background: var(--color-background);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, var(--color-background), rgba(255, 0, 0, 0.76), var(--color-title));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, white, rgb(133, 133, 242),rgb(115, 115, 245), skyblue, var(--color-title)); 
 }
 
 .card-img-meta,
