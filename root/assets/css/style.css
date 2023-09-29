@@ -601,9 +601,6 @@ body{
     transform: perspective(600px) rotateY(360deg);
 }
 
-
-
-
 /*Fin modo escuro---------------------------------------------------------------*/
 
 .image__container {
@@ -812,8 +809,55 @@ body{
     left: 1rem;
 }
 
+/*Formulario*/
+
+.form__container{
+    position: relative;
+    width: 45rem;
+    height: 50rem;
+    background-color: rgba(250, 128, 114, 0.28);
+    border-radius: 2rem;
+}
+
+.box{
+    position: relative;
+    width: 38rem;
+    height: 50rem;
+    background-color: var(--color-secondary);
+    border-radius: 1rem;
+}
+
+.box form{
+    position: absolute;
+    inset: 0.4rem;
+    background:  var(--color-company);
+    padding: 5rem 4rem;
+    border-radius: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2{
+    color: var(--color-principal);
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.15rem;
+}
+
+.box form .inputBox{
+    position: relative;
+    width: 30rem;
+    margin-top: 2rem;
 
 
+}
+
+.box form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+}
 
 
 

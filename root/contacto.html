@@ -136,9 +136,33 @@
         <!--Contenido principal-->
         <main class="layout__content">
 
-            <section class="content__page">
-                <h1 class="page__name">Fabián Mardones</h1>
-                <h2 class="page__job">Desarrollador Front End</h2>
+            <section class="content__page page__form">
+
+                <div class="form__container box">
+                    <form action="">
+                        <h2>Contact me</h2>
+                        <div class="form__name inputBox">
+                            <label for="">Nombre</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form__email inputBox">
+                            <label for="">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form__phone inputBox">
+                            <label for="">Telefono</label>
+                            <input type="text" name="phone" id="phone">
+                        </div>
+                        <div class="form__mensaje inputBox">
+                            <label for="">Mensaje</label>
+                            <textarea name="mensaje" id="mensaje"></textarea>
+                        </div>
+                        <div class="form__button">
+                            <input type="submit" value="Enviar Email"/>
+                        </div>
+                    </form>
+                </div>
+
             </section>
 
         </main>
