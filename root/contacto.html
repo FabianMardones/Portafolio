@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Portafolio - Fabian Mardones</title>
 </head>
@@ -112,6 +113,11 @@
                                 <i class="fa-brands fa-instagram" class="social__icon"></i>
                             </a>
                         </li>
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-github" class="social__icon"></i>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>
@@ -134,39 +140,41 @@
 
 
         <!--Contenido principal-->
-        <main class="layout__content">
+        <main class="layout__content contenido__formulario">
 
-            <section class="content__page page__form">
+            <section class="content__page content__form">
 
-                <div class="form__container box">
+                <div class="form__container">
+                    
                     <form action="">
+
                         <h2>Contact me</h2>
-                        <div class="form__name inputBox">
-                            <label for="">Nombre</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div class="form__email inputBox">
-                            <label for="">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div class="form__phone inputBox">
+
+                        <div class="input__group">
+
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name" placeholder="Nombre">
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email">
+
                             <label for="">Telefono</label>
-                            <input type="text" name="phone" id="phone">
-                        </div>
-                        <div class="form__mensaje inputBox">
+                            <input type="tel" name="phone" id="phone" placeholder="Telefono">
+
                             <label for="">Mensaje</label>
-                            <textarea name="mensaje" id="mensaje"></textarea>
+                            <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+                        
+
+                            <input class="form__button" type="submit" value="Enviar Email"/>
+
                         </div>
-                        <div class="form__button">
-                            <input type="submit" value="Enviar Email"/>
-                        </div>
+
                     </form>
                 </div>
 
             </section>
 
         </main>
-
 
     </div>
 

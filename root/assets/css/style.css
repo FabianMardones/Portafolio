@@ -811,53 +811,96 @@ body{
 
 /*Formulario*/
 
+
+.content__form{
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-subtitle);
+    background: linear-gradient(to right,#ba79bf, white);
+    
+}
+
+
 .form__container{
     position: relative;
-    width: 45rem;
-    height: 50rem;
-    background-color: rgba(250, 128, 114, 0.28);
-    border-radius: 2rem;
-}
-
-.box{
-    position: relative;
-    width: 38rem;
-    height: 50rem;
-    background-color: var(--color-secondary);
-    border-radius: 1rem;
-}
-
-.box form{
-    position: absolute;
-    inset: 0.4rem;
-    background:  var(--color-company);
-    padding: 5rem 4rem;
-    border-radius: 1rem;
-    z-index: 2;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
 }
 
-.box form h2{
-    color: var(--color-principal);
-    font-weight: bold;
+form{
+    position: absolute;
+    top: 0;
+    bottom: 0;
     text-align: center;
-    letter-spacing: 0.15rem;
-}
-
-.box form .inputBox{
-    position: relative;
-    width: 30rem;
-    margin-top: 2rem;
-
-
-}
-
-.box form .inputBox input{
-    position: relative;
+    padding: 3rem 0;
+    height: 59.3rem;
     width: 100%;
-    padding: 20px 10px 10px;
+    /* border: 1px solid red; */
+    border-radius: 1rem 0 1rem 0 1rem;
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#e96443, #c35cca, #e9d6ea ); 
 }
+
+.input__group{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    text-align: left;
+    width: 80%;
+}
+
+form h2{
+    font-size: 3.5rem;
+}
+
+label{
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input, textarea{
+    padding: 1rem 5rem;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-principal);
+    color: var(--color-text);
+    outline: none;
+    box-shadow: 1px 1px 10px -8px;
+}
+
+textarea{
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: var(--color-subtitle);
+}
+
+.form__button{
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-principal);
+    border: 2px solid var(--color);
+}
+
+.form__button:hover{
+    cursor: pointer;
+    background-color: var(--color-secondary);
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+
 
 
 
@@ -940,6 +983,23 @@ body{
 }
 
 .dark .card-body{
+    color: var(--color-principal);
+}
+.dark .content__form{
+    border: none;
+}
+
+.dark form{
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#e96443, #913e2a, #2f150f); 
+}
+
+.dark .content__form{
+    background: linear-gradient(to right,#773423, #4b2116, #050201 );
+}
+
+.dark label{
     color: var(--color-principal);
 }
 
