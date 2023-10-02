@@ -1,0 +1,22 @@
+@media (max-width: 1465px) {
+
+    body{
+        padding: 0;
+    }
+
+    .layout{
+        min-width: auto;
+        width: 87%;
+        margin-left: 8rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .layout{
+        width: 87%;
+        margin-left: 6rem;
+    }
+    .dark-light-mode_button{
+        z-index: 1;
+    }
+}

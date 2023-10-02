@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/spinner.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>Portafolio - Fabian Mardones</title>
 </head>
 <body>
@@ -145,32 +147,50 @@
             <section class="content__page content__form">
 
                 <div class="form__container">
-                    
-                    <form action="">
+
+                    <form id="contactform" />
 
                         <h2>Contact me</h2>
 
-                        <div class="input__group">
 
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" placeholder="Nombre">
+                            <div class="input__form">
+                                <label for="name">Nombre<span class="required">*</span></label>
+                                <input type="text" name="name" id="name" placeholder="Nombre">
+                            </div>
 
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <div class="input__form">
+                                <label for="email">Email<span class="required">*</span></label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
 
-                            <label for="">Telefono</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                            <div class="input__form">
+                                <label for="phone">Telefono<span class="required">*</span></label>
+                                <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                            </div>
 
-                            <label for="">Mensaje</label>
-                            <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
-                        
+                            <div class="input__form">
+                                <label for="comment">Mensaje<span class="required">*</span></label>
+                                <textarea name="comment" id="comment" placeholder="Mensaje"></textarea>
+                            </div>
 
-                            <input class="form__button" type="submit" value="Enviar Email"/>
+                            <div class="buttons__form">
+                                <button type="submit" value="Enviar Email" id="submitButton" disabled >Enviar Mensaje</button>
 
-                        </div>
+                                <button class="form__button" type="reset" value="Reset">Reset</button>
+                            </div>
+
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/root/index.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="enviando oculto">
+                                <span class="mensaje">Enviando Mensaje</span>
+                                <span class="loader" id="spinner"></span>
+                            </div>
 
                     </form>
                 </div>
+
 
             </section>
 
@@ -179,6 +199,8 @@
     </div>
 
     <script src="./assets/js/darkMode.js"></script>
+    <script src="./assets/js/validarForm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
