@@ -1,4 +1,4 @@
-@media (max-width: 1465px) {
+@media (max-width: 1480px) {
 
     body{
         padding: 0;
@@ -7,16 +7,236 @@
     .layout{
         min-width: auto;
         width: 87%;
-        margin-left: 8rem;
+        margin-left: 7rem;
+    }
+    .card{
+        width: 23.5rem;
+    }
+
+
+    .personal-info__photo{
+        right: 2rem;
+        height: 100%;
+
+    }
+    .pesonal-info__list{
+        margin-top: 0;
+    }
+
+    .dark-light-mode_button:hover{
+        padding-right: 2rem;
+        justify-content: center;
+    }
+
+    .fa-moon,
+    .fa-sun{
+    left: -1.8rem;
+    font-size: 3rem;
+    color: var(--color-background);
+    transition: color 300ms ease-in-out
     }
 }
 
+
+
+
+@media (max-width: 1400px){
+    .card{
+        width: 21.5rem;
+    }
+    .card-extra .front h4{
+        font-size: 3.8rem;
+    }
+}
+
+
+
+
 @media (max-width: 1300px) {
     .layout{
-        width: 87%;
-        margin-left: 6rem;
+        width: 86%;
+        margin-left: 7rem;
     }
     .dark-light-mode_button{
         z-index: 1;
     }
+
+    .card{
+        width: 20rem;
+    }
+
+    .about__personal-info{
+        position: relative;
+        top: -5rem;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .personal-info__bio{
+        display: flex;
+        width: 100%;
+    }
+
+    .personal-info__description{
+        width: 90%;
+        margin: 0 1rem
+    }
+    .pesonal-info__list{
+        width: 90%;
+        margin: 0 1rem
+    }
+    .personal-info__title,
+    .personal-info__value{
+        margin: none;
+    }
+
+    .card{
+        height: 40rem;
+        width: 20rem;
+    }
+}
+
+
+
+@media (max-width: 1230px){
+    .card{
+        width: 19rem;
+    }
+
+    .card-extra{
+        height: 35rem;
+    }
+
+    .card-extra .front h4{
+        font-size: 3.5rem;
+    }
+
+    .card-extra .back span{
+        font-size: 12px;
+    }
+    .card-extra .back h4{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 1160px){
+    .layout{
+        width: 85%;
+        margin-left: 6rem;
+    }
+    .card{
+        width: 18.5rem;
+        height: 34rem;
+    }
+    .card-extra{
+        margin: 0 0.3rem;
+    }
+    .image__container{
+        padding-left: 60%;
+        padding-right: 50%;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 1060px){
+    body{
+        background-image: none;
+        position: static;
+    }
+    .layout{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+
+        grid-template-areas: 'content';
+        grid-template-columns: 100%;
+    }
+
+    .layout__content{
+        border-radius: 0;
+        background-color: transparent;
+        height: 100%;
+    }
+
+    .content__page{
+        border-radius: 0;
+        height: 100vh;
+    }
+
+    .layout__menu{
+        position: static;
+    }
+
+    .image__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 40rem;
+    }
+
+    .card{
+        position: relative;
+        justify-content: center;
+        width: 80rem;
+        height: 20rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-img-meta,
+    .card-img-coursera,
+    .card-img-google {
+        position: absolute;
+        width: 40%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
+        height: 90%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
+        margin-left: 25%;
+    }
+
+    .card-img-coursera{
+        top: -10%;
+    }
+
+    .card-img-meta{
+        top: 20%;
+    }
+
+    .card-img-google{
+        top: 45%;
+        width: 40%;
+        height: 50%;
+    }
+
+
+    .content__form{
+        display: flex;
+        justify-content: center;
+        background: white;
+    }
+
+    .form__container{
+        justify-content: center;
+        height: 80vh;
+    }
+
+    form{
+        margin-left: 7%;
+        border-radius: 2rem;
+        height: 100%;
+        background: linear-gradient(to right,#e96443, #d3816d, #d4bab3 );
+        padding: 5rem;
+        box-shadow: 10px 10px 50px -30px;
+    }
+
+    .dark form{
+        background: linear-gradient(to right, #904e95, #e96443)
+    }
+
+    .dark .content__form{
+        background: var(--color-title);
+    }
+
 }

@@ -1,8 +1,8 @@
 //Selectores
-const inputNombre = document.querySelector('#name')
+const inputNombre = document.querySelector('#nombre')
 const inputEmail = document.querySelector('#email')
-const inputTelefono = document.querySelector('#phone')
-const inputMensaje = document.querySelector('#comment')
+const inputTelefono = document.querySelector('#telefono')
+const inputMensaje = document.querySelector('#mensaje')
 const inputFormulario = document.querySelector('#contactform')
 const formulario = document.querySelector('#contactform')
 const btnSubmit = document.querySelector('#submitButton');
@@ -11,20 +11,20 @@ const enviando = document.querySelector('.enviando')
 
 
 const datosForm = {
-    name: '',
+    nombre: '',
     email: '',
-    phone: '',
-    comment: ''
+    telefono: '',
+    mensaje: ''
 }
 
 
 //Eventos
 function agruparEventListener(){
-    inputNombre.addEventListener('blur', validacion)
-    inputEmail.addEventListener('blur', validacion)
-    inputTelefono.addEventListener('blur', validacion)
-    inputMensaje.addEventListener('blur', validacion)
-    inputFormulario.addEventListener('blur', validacion)
+    inputNombre.addEventListener('input', validacion)
+    inputEmail.addEventListener('input', validacion)
+    inputTelefono.addEventListener('input', validacion)
+    inputMensaje.addEventListener('input', validacion)
+    inputFormulario.addEventListener('input', validacion)
     formulario.addEventListener('submit', enviarFormulario)
     btnReset.addEventListener('click', ((e) =>{
         e.preventDefault()
@@ -58,6 +58,20 @@ function validacion(e){
         return
     }
 
+    if(isNaN(valorInput) && idInput === 'telefono'){
+        mostrarAlerta(`El numero es inválido`, referencia)
+        datosForm[idInput] = ''
+        validarObjetoDatosForm()
+        return
+    }
+
+    if(idInput === 'mensaje' && valorInput.length < 10){
+        mostrarAlerta(`El mensaje debe contener al menos 10 caracteres`, referencia)
+        datosForm[idInput] = ''
+        validarObjetoDatosForm()
+        return
+    }
+
     eliminarAlerta(referencia)
 
     datosForm[idInput] = valorInput.trim().toLowerCase()
@@ -82,8 +96,9 @@ function enviarFormulario(e) {
         Swal.fire({
             position: 'top-center',
             icon: 'success',
-            title: `Gracias ${datosForm.name}`,
-            color: '#716add',
+            background: '#555',
+            color: '#ffff',
+            title: `Gracias ${datosForm.nombre}`,
             text: 'Tu mensaje ha sido enviado con exito',
             showConfirmButton: false,
             timer: 4000
@@ -101,10 +116,10 @@ function enviarFormulario(e) {
 }
 
 function resetearFormulario () {
-    datosForm.name = ''
+    datosForm.nombre = ''
     datosForm.email = ''
-    datosForm.phone = ''
-    datosForm.comment = ''
+    datosForm.telefono = ''
+    datosForm.mensaje = ''
 
     validarObjetoDatosForm()
 

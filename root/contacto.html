@@ -154,8 +154,8 @@
 
 
                             <div class="input__form">
-                                <label for="name">Nombre<span class="required">*</span></label>
-                                <input type="text" name="name" id="name" placeholder="Nombre">
+                                <label for="nombre">Nombre<span class="required">*</span></label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                             </div>
 
                             <div class="input__form">
@@ -164,13 +164,13 @@
                             </div>
 
                             <div class="input__form">
-                                <label for="phone">Telefono<span class="required">*</span></label>
-                                <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                                <label for="telefono">Telefono<span class="required">*</span></label>
+                                <input type="tel" name="telefono" id="telefono" placeholder="Telefono">
                             </div>
 
                             <div class="input__form">
-                                <label for="comment">Mensaje<span class="required">*</span></label>
-                                <textarea name="comment" id="comment" placeholder="Mensaje"></textarea>
+                                <label for="mensaje">Mensaje<span class="required">*</span></label>
+                                <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
                             </div>
 
                             <div class="buttons__form">
@@ -179,13 +179,20 @@
                                 <button class="form__button" type="reset" value="Reset">Reset</button>
                             </div>
 
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/root/index.html">
+                            <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/root/index.html">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
 
                             <div class="enviando oculto">
                                 <span class="mensaje">Enviando Mensaje</span>
-                                <span class="loader" id="spinner"></span>
+                                <div class="sk-chase">
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                  </div>
                             </div>
 
                     </form>

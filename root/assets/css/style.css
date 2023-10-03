@@ -334,7 +334,6 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    
 }
 
 .personal-info__photo{
@@ -567,15 +566,16 @@ body{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    overflow-y: auto;
     box-shadow: 0 5px 10px var(--color-title);
 }
+
 
 .card-extra .back .extra__icon{
     font-size: 2rem;
 }
 
 .card-extra .back h4{
-    color: var(--color-principal);
     font-size: 2rem;
     text-align: center;
 }
@@ -583,6 +583,14 @@ body{
 .card-extra .back span{
     font-size: 13px;
 }
+
+.card-extra .back .extra__quantity:hover{
+    font-size: 13px;
+    background: var(--color-principal);
+    color: var(--color-title);
+    border-radius: 1rem;
+}
+
 
 .card-extra .back .link{
     border-top: 1px solid;
@@ -648,7 +656,6 @@ body{
     width: 80%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
     height: 27%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
     left: 2.5rem;
-
 }
 
 
@@ -727,11 +734,14 @@ body{
 .btn-container-card{
     position: absolute;
     top: 35.5rem;
-    left: 5rem;
+    left: 3.5rem;
+    width: 70%;
 }
 
 .card-btn{
-    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem 0;
     border: 2px solid var(--color-principal);
     border-radius: 3rem;
     box-shadow: 1px 1px 3px -2px;
@@ -743,9 +753,8 @@ body{
     position: relative;
     top: 0;
     left: 2rem;
-    padding: 1rem;
     text-align: center;
-    width: 17rem;
+    width: 90%;
 }
 
 .card-btn:hover{
@@ -762,8 +771,8 @@ body{
 .card-img-leones{
     position: absolute;
     top: 10rem;
-    width: 22rem;
-    left: 1.5rem;
+    left: 2.3rem;
+    width: 80%;
     height: 20rem;
 
 }
@@ -783,13 +792,13 @@ body{
 }
 
 .card-img-DH{
-    width: 20rem;
+    width: 80%;
     position: absolute;
     top: 8rem;
     left: 2rem;
 }
 .card-img-ctd{
-    width: 20rem;
+    width: 80%;
     position: absolute;
     top: 19rem;
     left: 2rem;
@@ -803,10 +812,10 @@ body{
 }
 
 .card-img-poliglota{
-    width: 23rem;
+    width: 80%;
     position: absolute;
     top: 15rem;
-    left: 1rem;
+    left: 2.2rem;
 }
 
 /*Formulario*/
@@ -838,6 +847,7 @@ form{
     position: absolute;
     top: 0;
     bottom: 0;
+    left: 2rem;
     text-align: start;
     padding-top: 7rem;
     padding-bottom: 5rem;
@@ -930,9 +940,11 @@ input::placeholder, textarea::placeholder{
 #spinner{
     width: 50px;
 }
+
 .mensaje{
     color: var(--color-principal);
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .required{
@@ -998,6 +1010,7 @@ input::placeholder, textarea::placeholder{
 .dark .content__about{
     color: var(--color-principal);
 }
+
 
 
 .dark {

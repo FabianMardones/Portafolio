@@ -10,6 +10,7 @@
     background: transparent;
 }
 
+
 .image__container::-webkit-scrollbar{
     height: 25px;
     background: transparent;
@@ -70,6 +71,33 @@
 }
 
 .layout__aside::-webkit-scrollbar-track{
+    margin: 40px 0; 
+}
+
+
+/*scroll cards about me*/
+
+.back::-webkit-scrollbar{
+    width: 25px;
+    background: transparent
+}
+
+.back::-webkit-scrollbar-thumb{
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 40px;
+}
+
+.back:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 0 10px var(--color-principal);
+}
+
+.back:hover::-webkit-scrollbar-thumb:hover{
+    border: 8px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-principal);
+}
+
+.back::-webkit-scrollbar-track{
     margin: 40px 0; 
 }
 
