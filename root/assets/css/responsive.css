@@ -176,7 +176,7 @@
         justify-content: center;
         padding-left: 0;
         padding-right: 0;
-        padding-top: 40rem;
+        padding-top: 70rem;
     }
 
     .card{
@@ -189,7 +189,11 @@
 
     .card-img-meta,
     .card-img-coursera,
-    .card-img-google {
+    .card-img-google,
+    .card-img-poliglota,
+    .card-img-DH,
+    .card-img-ctd,
+    .card-img-leones{
         position: absolute;
         width: 40%; /* Ajustamos el ancho al 100% para que ocupen todo el contenedor */
         height: 90%; /* Ajustamos la altura al 100% para que ocupen todo el contenedor */
@@ -208,6 +212,30 @@
         top: 45%;
         width: 40%;
         height: 50%;
+    }
+
+    .card-img-poliglota{
+        top: 25%;
+        width: 40%;
+        height: 50%; 
+    }
+
+
+    .card-img-DH{
+        display: none;
+    }
+
+    .card-img-ctd{
+        top: 5%;
+        left: 0;
+        width: 50%;
+    }
+
+    .card-img-leones{
+        top: 0;
+        left: 8rem;
+        width: 30%;
+        height: 100%;
     }
 
 
@@ -239,4 +267,53 @@
         background: var(--color-title);
     }
 
+}
+
+
+
+@media (max-width: 900px){
+    .card{
+        width: 70rem;
+    }
+}
+
+
+
+
+@media (max-width: 800px){
+    .card{
+        width: 60rem;
+    }
+
+    .card-img-coursera,
+    .card-img-meta,
+    .card-img-google,
+    .card-img-poliglota,
+    .card-img-ctd{
+        left: -2rem;
+        width: 55%;
+    }
+
+
+
+
+}
+
+@media (max-width: 700px){
+    .card{
+        width: 55rem;
+    }
+}
+
+@media (max-width: 620px){
+    .card{
+        width: 45rem;
+    }
+}
+
+
+@media (max-width: 520px){
+    .card{
+        width: 35rem;
+    }
 }
