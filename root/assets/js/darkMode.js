@@ -46,8 +46,6 @@ function cargarModoOscuro() {
 }
 
 
-
-
 function activarModoOscuro() {
     index.classList.add('dark');
     luna.classList.add('oculto');
@@ -84,6 +82,50 @@ function cambiarModo() {
         activarModoOscuro();
     }
 }
+
+
+
+
+//Activar y desactivar enlaces
+
+const enlaces = document.querySelectorAll('.enlace');
+let urlOriginal;
+
+function guardarUrlOriginal(){
+    urlOriginal = enlaces[0].getAttribute('href')
+}
+
+function deshabilitarEnlace() {
+  if (window.innerWidth <= 1060) {
+    enlaces.forEach(enlace => {
+      enlace.removeAttribute('href');
+    });
+  } else {
+    enlaces.forEach(enlace => {
+      enlace.setAttribute('href', 'urlOriginal');
+    });
+  }
+}
+
+function verificarWidth(){
+    if (window.innerWidth <= 1060) {
+        window.addEventListener("load", deshabilitarEnlace);
+        window.addEventListener("resize", deshabilitarEnlace);
+        return;
+    }
+        window.addEventListener("resize", guardarUrlOriginal)
+        window.addEventListener("load", guardarUrlOriginal);
+}
+
+verificarWidth()
+
+
+
+
+
+
+
+
 
 
 

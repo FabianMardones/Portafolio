@@ -1,3 +1,4 @@
+/*---------------------------Media Query 1480------------------------------*/
 @media (max-width: 1480px) {
 
     body{
@@ -20,7 +21,7 @@
 
     }
     .pesonal-info__list{
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
     .dark-light-mode_button:hover{
@@ -38,8 +39,7 @@
 }
 
 
-
-
+/*---------------------------Media Query 1400------------------------------*/
 @media (max-width: 1400px){
     .card{
         width: 21.5rem;
@@ -47,11 +47,16 @@
     .card-extra .front h4{
         font-size: 3.8rem;
     }
+
+    form h2::after{
+        width: 4rem;
+        left: 25vw;
+    }
 }
 
 
 
-
+/*---------------------------Media Query 1300------------------------------*/
 @media (max-width: 1300px) {
     .layout{
         width: 86%;
@@ -95,10 +100,19 @@
         height: 40rem;
         width: 20rem;
     }
+
+    form h2::after{
+        left: 68%;
+    }
+
+    .personal-info__bio{
+        flex-direction: row;
+        top: 1rem;
+    }
 }
 
 
-
+/*---------------------------Media Query 1230------------------------------*/
 @media (max-width: 1230px){
     .card{
         width: 19rem;
@@ -119,12 +133,16 @@
         font-size: 15px;
     }
 
+    form h2::after{
+        left: 69%;
+    }
+
 }
 
+/*---------------------------Media Query 1160------------------------------*/
 @media (max-width: 1160px){
     .layout{
         width: 85%;
-        margin-left: 6rem;
     }
     .card{
         width: 18.5rem;
@@ -134,17 +152,32 @@
         margin: 0 0.3rem;
     }
     .image__container{
-        padding-left: 60%;
-        padding-right: 50%;
-        width: 100vw;
+        padding-left: 75%;
+        width: 100%;
+    }
+
+    form h2::after{
+        left: 72%;
+    }
+
+    .enviando{
+        position: absolute;
+        right: 4rem;
     }
 }
+
+
+
+
+/*---------------------------Media Query 1060------------------------------*/
 
 @media (max-width: 1060px){
     body{
         background-image: none;
-        position: static;
+        position:static;
     }
+
+
     .layout{
         width: 100%;
         height: 100%;
@@ -155,15 +188,28 @@
         grid-template-columns: 100%;
     }
 
+    .layout__aside{
+        display: none;
+    }
+
     .layout__content{
         border-radius: 0;
         background-color: transparent;
         height: 100%;
     }
 
-    .content__page{
+    .content__page,
+    .dark .content__form{
         border-radius: 0;
         height: 100vh;
+        background: url(../img/fondo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -1px -0px;
+    }
+
+    .dark .content__page{
+        border: none;
     }
 
     .layout__menu{
@@ -242,44 +288,83 @@
     .content__form{
         display: flex;
         justify-content: center;
-        background: white;
     }
 
     .form__container{
         justify-content: center;
-        height: 80vh;
-    }
-
-    form{
-        margin-left: 7%;
-        border-radius: 2rem;
-        height: 100%;
-        background: linear-gradient(to right,#e96443, #d3816d, #d4bab3 );
+        height: 80%;
         padding: 5rem;
+        overflow: auto;
+        border-radius: 2rem;
+        background: linear-gradient(to right,#e96443, #cc6f58, #c89f94 );
         box-shadow: 10px 10px 50px -30px;
     }
 
-    .dark form{
+
+    form{
+        width: 90%;
+    }
+
+    form h2::after{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 63%;
+    z-index: -1;
+    width: 10%;
+    height: 5%;
+    background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 0.5;
+    }
+
+    .dark .form__container{
         background: linear-gradient(to right, #904e95, #e96443)
     }
 
-    .dark .content__form{
-        background: var(--color-title);
+    .dark .input__form input,
+    .dark .input__form textarea{
+        background: var(--color-text);
+        color: var(--color-principal);
+        border: none;
     }
 
+    .dark .input__form input::placeholder,
+    .dark .input__form textarea::placeholder{
+        color: var(--color-background);
+    }
+
+
+    .form__container .enviando{
+        top: 52rem;
+        left: 12%;
+    }
+    .personal-info__bio{
+        background: var(--color-title);
+    }
 }
 
 
-
+/*---------------------------Media Query 900------------------------------*/
 @media (max-width: 900px){
     .card{
         width: 70rem;
     }
+
+    .enviando{
+        top: 80%;
+        left: 13%;
+    }
+
+    .dark-light-mode_button:hover {
+        padding: 3rem 2.5rem; /* Mantener el padding fijo en la media query */
+  
+    }
 }
 
 
 
-
+/*---------------------------Media Query 800------------------------------*/
 @media (max-width: 800px){
     .card{
         width: 60rem;
@@ -294,26 +379,142 @@
         width: 55%;
     }
 
-
+    .testimonials__testimonials{
+        flex-basis: 100%;
+    }
 
 
 }
 
+
+/*---------------------------Media Query 700------------------------------*/
 @media (max-width: 700px){
     .card{
         width: 55rem;
     }
+
+    .card-img-DH{
+        display: block;
+        top: -4rem;
+        height: 60%;
+    }
+
+    .card-img-ctd{
+        left: 1rem;
+        top: 7.5rem;
+        height: 60%;
+        width: 50%;
+    }
+    
+
+
 }
 
+
+
+/*---------------------------Media Query 620------------------------------*/
 @media (max-width: 620px){
     .card{
         width: 45rem;
     }
+
+    .card-img-coursera{
+        width: 50%;
+        height: 70%;
+        top: 0;
+        left: 0;
+    }
+
+    .card-img-meta{
+        width: 50%;
+        height: 70%;
+        top: 5rem;
+        left:0;
+    }
+
+    .card-img-google{
+        top: 45%;
+        left: 0;
+        width: 50%;
+        height: 40%;
+    }
+
+    .card-img-poliglota{
+        top: 27%;
+        left: -3rem;
+        width: 60%;
+        height: 40%; 
+    }
+
+
+    .card-img-DH{
+        display: block;
+        height: 60%;
+        width: 50%;
+        top: -3rem;
+        left: 0;
+    }
+
+    .card-img-ctd{
+        top: 9rem;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        left: 0;
+    }
+
+    .card-img-leones{
+        top: 0;
+        left: 0rem;
+        width: 50%;
+        height: 100%;
+    }
 }
 
-
+/*---------------------------Media Query 520------------------------------*/
 @media (max-width: 520px){
     .card{
-        width: 35rem;
+        width: 40rem;
+        margin: 2rem 5rem;
+    }
+
+    .card-img-coursera{
+        width: 50%;
+        height: 55%;
+        top: 2rem;
+        left: 0;
+    }
+
+    .card-img-meta{
+        width: 50%;
+        height: 55%;
+        top: 6rem;
+    }
+
+    .card-img-google{
+        height: 30%;
+    }
+
+    .card-img-poliglota{
+        top: 6rem;
+        left: -2rem;
+        width: 60%;
+        height: 35%; 
+    }
+
+
+    .card-img-DH{
+        height: 50%;
+        width: 50%;
+        top: -1rem;
+        left: 0;
+    }
+
+    .card-img-ctd{
+        top: 9rem;
+        left: 0;
+        width: 60%;
+        height: 50%;
+        left: -2rem;
     }
 }
