@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media print {
+    .no-print, .no-print *{
+        display: none !important;
+    }
+}
+
+
+body{
+    background-color: rgba(128, 128, 128, 0.077);
+}

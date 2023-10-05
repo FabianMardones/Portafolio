@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compartir en WhatsApp</title>
+</head>
+<body>
+    <button onclick="compartirEnWhatsApp()">Compartir en WhatsApp</button>
+
+    <script>
+        function compartirEnWhatsApp() {
+            // Crea el enlace de WhatsApp sin número de teléfono predefinido
+            var whatsappURL = "whatsapp://send?text=" + encodeURIComponent("¡Echa un vistazo a esta página: https://tu-pagina.com!");
+
+            // Abre el enlace en una nueva ventana o pestaña
+            window.open(whatsappURL);
+        }
+    </script>
+</body>
+</html>
