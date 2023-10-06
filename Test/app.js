@@ -5,14 +5,11 @@ function print_document(){
 
 
 const formulario = document.querySelector('#formulario')
-const contenedorLideres = document.querySelector('#lideres')
-const contenedorPastores = document.querySelector('#pastores')
-const contenedor = document.querySelector('#contenedor-datos')
-const fechaEncuentro = document.querySelector('#fecha')
+const contenedor = document.querySelector('#contenedor')
+const informe = document.querySelector('.informe')
+let contenedorDatos = []
 
-
-let contenedorNombres = []
-
+console.log(contenedor);
 
 formulario.addEventListener('submit', registrar)
 
@@ -20,38 +17,54 @@ formulario.addEventListener('submit', registrar)
 function registrar(e){
     e.preventDefault()
 
-    const inputNombre1 = document.querySelector('#nombre1').value
-    const inputNombre2 = document.querySelector('#nombre2').value
+
+    const inputNombre1 = document.querySelector('.nombre1').value
+    const inputNombre2 = document.querySelector('.nombre2').value
+    const selectModalidad = document.querySelector('.modalidad').value
 
 
     const objetoRegistro = {
+        fecha: new Date(),
         nombre1: inputNombre1,
         nombre2: inputNombre2,
-        fecha: fechaEncuentro
+        modalidad: selectModalidad
     }
 
-    contenedorNombres = [...contenedorNombres, objetoRegistro]
+    contenedorDatos = [...contenedorDatos, objetoRegistro]
+
+    console.log(contenedorDatos);
 
     imprimirHtml()
-
+    mostrarReporte()
 }
+
 
 function imprimirHtml(){
-    contenedorNombres.forEach(nombre => {
 
-        const nombrePastores = document.createElement('strong')
-        const nombreVoluntario = document.createElement('strong')
-        const fechaEncuentroHoy = document.createElement('strong')
+    contenedorDatos.forEach(nombre => {
 
+        const nombrePastores = document.createElement('p')
         nombrePastores.textContent = nombre.nombre1
-        nombreVoluntario.textContent = nombre.nombre2
-        fechaEncuentroHoy.textContent = nombre.fechaEncuentro = new Date()
+        const nombreVoluntarios = document.createElement('p')
+        nombreVoluntarios.textContent = nombre.nombre2
 
-        fechaEncuentro.appendChild(fechaEncuentroHoy)
-        contenedorPastores.appendChild(nombrePastores)
-        contenedorLideres.appendChild(nombreVoluntario)
+
+        contenedor.appendChild(nombrePastores)
+        contenedor.appendChild(nombreVoluntarios)
     })
 }
+
+function mostrarReporte(){
+
+    if (contenedor.length > 1) {
+        informe.classList.remove('oculto')
+    }else{
+        informe.classList.add('oculto')
+    }
+}
+
+mostrarReporte()
+
 
 
 

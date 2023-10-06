@@ -9,57 +9,131 @@
 </head>
 <body>
 
-    <section>
-        <div class="accordion container no-print" style="max-width: 1020px !important; margin-top: 20px;" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Ingresa aquí los datos
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <form id="formulario">
-                        <div class="mb-3">
-                          <label for="text" class="form-label">Pastores de Campus</label>
-                          <input type="text" class="form-control" id="nombre1">
-                        </div>
-                        <div class="mb-3">
-                          <label for="text" class="form-label">Nombre Lideres de voluntarios</label>
-                          <input type="text" class="form-control" id="nombre2">
-                        </div>
-                        <div class="mb-3">
-                            <label for="text" class="form-label">Modalidad</label>
-                            <select class="form-select mb-3" aria-label="Default select example">
-                            <option value=""></option>
-                            <option value="Presencial">Presencial</option>
-                            <option value="Virtual">Virtual</option>
-                          </select>
-                        <div class="mb-3">
-                            <label for="text" class="form-label">Campus</label>
-                            <select class="form-select mb-3" aria-label="Default select example">
-                            <option value=""></option>
-                            <option value="Presencial">Puente Alto</option>
-                            <option value="Virtual">Santiago</option>
-                            <option value="Virtual">Montevideo</option>
-                            <option value="Virtual">Miami</option>
-                            <option value="Virtual">Miami Doral</option>
-                          </select>
-                          <div class="mb-3">
-                            <label for="text" class="form-label">Hora</label>
-                            <input type="time" class="form-control" id="nombre">
-                          </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Registrar Datos</button>
-                      </form>
-                </div>
-              </div>
+    <section class="no-print">
+      <form id="formulario">
+      <div class="accordion container mt-lg-5" style="max-width: 1020px;" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Datos de Pastores y lideres
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">                        <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre1" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Pastores de Campus</label>
             </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre2" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Lideres Voluntarios</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select modalidad" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Modalidad</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Campus</option>
+                <option value="Puente alto">Puente Alto</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Miami">Miami</option>
+                <option value="Miami-Doral">Miami (Doral)</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div></div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">                        <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre1" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Pastores de Campus</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre2" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Lideres Voluntarios</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Modalidad</option>
+                <option value="1">Presencial</option>
+                <option value="2">Virtual</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Campus</option>
+                <option value="Puente alto">Puente Alto</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Miami">Miami</option>
+                <option value="Miami-Doral">Miami (Doral)</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div></div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">                        <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre1" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Pastores de Campus</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control nombre2" id="floatingInput" placeholder="Nombre">
+              <label for="floatingInput">Lideres Voluntarios</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Modalidad</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="">Campus</option>
+                <option value="Puente alto">Puente Alto</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Miami">Miami</option>
+                <option value="Miami-Doral">Miami (Doral)</option>
+              </select>
+              <label for="floatingSelect">Selecciona una opción</label>
+            </div></div>
+        </div>
+      </div>
+      <div class="card d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Registrar Datos</button>
+      </div>
+    </form>
     </section>
 
     <section class="container" style=" max-width: 1020px !important;">
-        <div class="card" style="margin-top: 20px;">
+        <div class="card informe" style="margin-top: 20px;">
 
             <div class="card-header d-flex justify-content-between">
                 <h3>Ar <strong>Ministries</strong></h3>
@@ -69,11 +143,7 @@
             <div class="card-body d-flex flex-direction-row-reverse" id="contenido">
 
                 <div class="w-100 text-left">
-
-                        <p id="fecha">Fecha Emisión</p>
-                        <p id="pastores">Pastores de campus: </p>
-                        <p id="lideres">Lideres de voluntarios: </p>
-
+                      <div id="contenedor"></div>
                 </div>
 
                 <div class="w-100 text-center" style="margin-top: 10px;">
